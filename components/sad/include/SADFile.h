@@ -167,7 +167,7 @@ public:
 	[[nodiscard]] const auto& GetFilenames() const { return _filenames; }
 	[[nodiscard]] const auto& GetInfo() const { return _info; }
 	[[nodiscard]] const auto& GetTable() const { return _table; }
-	[[nodiscard]] const auto& GetSoundData(uint32_t i) const { return _sounds[i]; }
+	[[nodiscard]] const auto& GetSoundData(size_t i) const { return _sounds[i]; }
 };
 
 } // namespace openblack::sad
