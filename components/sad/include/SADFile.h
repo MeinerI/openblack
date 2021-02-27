@@ -135,7 +135,7 @@ class SADFile
 {
 protected:
 	/// True when a file has been loaded
-	std::array<bool, 3> _isLoaded;
+	std::array<bool, 3> _isLoaded = {false, false, false};
 
 	std::tuple<std::string, std::string, std::string> _filenames;
 
