@@ -51,7 +51,7 @@ bool SoundPack::LoadFromFile(const fs::path& path)
 	else
 	{
 		spdlog::warn("File has no description {}", path.generic_string());
-		_name = path;
+		_name = path.string();
 	}
 
 	// TODO: Discover sector flag
