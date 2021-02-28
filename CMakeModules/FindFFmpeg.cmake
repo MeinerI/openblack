@@ -20,6 +20,7 @@
 #   - POSTPROCESS
 #   - SWSCALE
 #   - SWRESAMPLE
+#   - AVFILTER
 # the following variables will be defined
 #  FFmpeg_<component>_FOUND        - System has <component>
 #  FFmpeg_<component>_INCLUDE_DIRS - Include directory necessary for using the <component> headers
@@ -78,6 +79,7 @@ endmacro()
 
 # fill 'hashmap' named find_args
 hashmap_set(find_args AVCODEC  libavcodec  avcodec  libavcodec/avcodec.h)
+hashmap_set(find_args AVFILTER libavfilter avfilter libavfilter/avfilter.h)
 hashmap_set(find_args AVFORMAT libavformat avformat libavformat/avformat.h)
 hashmap_set(find_args AVDEVICE libavdevice avdevice libavdevice/avdevice.h)
 hashmap_set(find_args AVUTIL   libavutil   avutil   libavutil/avutil.h)
