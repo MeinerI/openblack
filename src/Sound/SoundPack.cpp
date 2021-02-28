@@ -50,7 +50,7 @@ bool SoundPack::LoadFromFile(const fs::path& path)
 	}
 	else
 	{
-		spdlog::warn("File has no description {}", path.generic_string());
+		spdlog::warn("File has no description with path {}", path.generic_string());
 		_name = path.string();
 	}
 
