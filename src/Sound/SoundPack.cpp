@@ -109,8 +109,17 @@ bool SoundPack::LoadFromFile(const fs::path& path)
 		}
 		else
 		{
-			Sound sound;
 			auto name = audioSampleFileName.string();
+
+			// We have two cases where there are blank sample structs. These empty structs are best ignored
+			// 1 is found in InGame.sad and 1 is found in spells.sad
+			if (name.empty() || sample.id == 0)
+			{
+				spdlog::error("Invalid sound. Sample name is empty or has no ID");
+				continue;
+			}
+
+			Sound sound;
 			sound.id = CreateId();
 			sound.name = name;
 			sound.priority = sample.priority;
