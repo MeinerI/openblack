@@ -16,7 +16,7 @@
 namespace openblack::audio
 {
 
-using AudioEmitterId = size_t;
+using AudioEmitterId = int64_t;
 using AudioSourceId = unsigned int;
 using AudioBufferId = unsigned int;
 
